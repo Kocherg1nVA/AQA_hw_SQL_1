@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class VerificationPage {
 
-    private static SelenideElement codeField = $("[data-test-id='code'] input");
-    private static SelenideElement continueButton = $("[data-test-id='action-verify'].button");
-    private static SelenideElement header = $(".paragraph");
+    private static final SelenideElement codeField = $("[data-test-id='code'] input");
+    private static final SelenideElement continueButton = $("[data-test-id='action-verify'].button");
+    private static final SelenideElement header = $(".paragraph");
 
     public VerificationPage() {
         header.shouldBe(Condition.visible);

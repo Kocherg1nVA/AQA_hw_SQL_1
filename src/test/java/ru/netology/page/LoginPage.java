@@ -7,9 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
 
-    private static SelenideElement loginField = $("[data-test-id='login'] .input__control");
-    private static SelenideElement passwordField = $("[data-test-id='password'] .input__control");
-    private static SelenideElement continueButton = $("[data-test-id='action-login'].button");
+    private static final SelenideElement loginField = $("[data-test-id='login'] .input__control");
+    private static final SelenideElement passwordField = $("[data-test-id='password'] .input__control");
+    private static final SelenideElement continueButton = $("[data-test-id='action-login'].button");
 
     public VerificationPage validLogin(DataHelper.AuthInfo authInfo) {
         loginField.setValue(authInfo.getLogin());

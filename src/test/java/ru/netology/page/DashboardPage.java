@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class DashboardPage {
 
-    private static SelenideElement header = $("[data-test-id='dashboard']");
+    private static final SelenideElement header = $("[data-test-id='dashboard']");
 
     public DashboardPage() {
         header.shouldBe(Condition.visible);
