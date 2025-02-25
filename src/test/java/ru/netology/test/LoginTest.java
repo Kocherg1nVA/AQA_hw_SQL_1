@@ -21,9 +21,11 @@ public class LoginTest {
 
     @Test
     public void shouldSuccessLogin() {
+
         loginPage = Selenide.open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getAuthInfoForTestData();
         verificationPage = loginPage.validLogin(authInfo);
-        dashboardPage = verificationPage.validVerify(authInfo);
+        String verificationCode = SQLHelper.getVerificationCode(authInfo.getLogin());
+        dashboardPage = verificationPage.validVerify(verificationCode);
     }
 }

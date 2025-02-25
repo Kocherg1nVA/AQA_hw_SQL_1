@@ -17,9 +17,10 @@ public class VerificationPage {
         header.shouldBe(Condition.visible);
     }
 
-    public DashboardPage validVerify(DataHelper.AuthInfo authInfo) {
-        String login = authInfo.getLogin();
-        codeField.setValue(SQLHelper.getVerificationCode(login));
+    public DashboardPage validVerify(String verificationCode) {
+//        String login = authInfo.getLogin();
+//        codeField.setValue(SQLHelper.getVerificationCode(login));
+        codeField.setValue(verificationCode);
         continueButton.click();
         return new DashboardPage();
     }
