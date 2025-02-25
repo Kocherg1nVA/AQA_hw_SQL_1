@@ -21,17 +21,12 @@ public class DataHelper {
         return faker.internet().uuid();
     }
 
-//    public static AuthInfo getAuhInfo(){
-//        return new AuthInfo(generateId(), generateLogin(), generatePassword());
-//    }
-
     public static AuthInfo getAuthInfoForTestData() {
         return new AuthInfo("vasya", "qwerty123");
     }
 
     @Value
     public static class AuthInfo {
-//        String id;
         String login;
         String password;
     }
